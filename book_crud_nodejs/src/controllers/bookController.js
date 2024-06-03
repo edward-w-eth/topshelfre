@@ -1,5 +1,4 @@
 let books = [];
-let idCounter = 1;
 
 const getBooks = (req, res) => {
   res.json(books);
@@ -13,7 +12,6 @@ const getBookById = (req, res) => {
 
 const createBook = (req, res) => {
   const newBook = {
-    id: idCounter++,
     ...req.body,
   };
   books.push(newBook);
